@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var city = ""
+    
+    @ObservedObject var api = ApiViewModel()
+    
     var body: some View {
+        let weatherImageView:UIImageView!
+        let placeLabel: UILabel!
+        let temperLabel: UILabel!
+        let feelsLikeTemperLabel: UILabel!
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField("Enter a city name", text: $city)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            Button(action: {
+                if self.city != nil {
+                    api.fetchWeatherAPIRequest(forCity: city)
+                }
+            }) {
+                Text("Get weather")
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
