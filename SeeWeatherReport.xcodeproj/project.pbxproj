@@ -14,6 +14,7 @@
 		A22ACFF82C63AF4B00CFDC37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFF72C63AF4B00CFDC37 /* Model.swift */; };
 		A22ACFFB2C6594BC00CFDC37 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */; };
 		A22ACFFD2C65A70F00CFDC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFFC2C65A70F00CFDC37 /* Constants.swift */; };
+		A24F9EE22C6B9756006B3D1F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F9EE12C6B9756006B3D1F /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A22ACFF72C63AF4B00CFDC37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
 		A22ACFFC2C65A70F00CFDC37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A24F9EE12C6B9756006B3D1F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				A22ACFED2C63A61900CFDC37 /* Assets.xcassets */,
 				A22ACFEF2C63A61900CFDC37 /* Preview Content */,
 				A22ACFFC2C65A70F00CFDC37 /* Constants.swift */,
+				A24F9EE12C6B9756006B3D1F /* AlertController.swift */,
 			);
 			path = SeeWeatherReport;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				A22ACFEC2C63A61800CFDC37 /* ContentView.swift in Sources */,
 				A22ACFF82C63AF4B00CFDC37 /* Model.swift in Sources */,
 				A22ACFFB2C6594BC00CFDC37 /* ApiViewModel.swift in Sources */,
+				A24F9EE22C6B9756006B3D1F /* AlertController.swift in Sources */,
 				A22ACFEA2C63A61800CFDC37 /* ViewModelMainScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
