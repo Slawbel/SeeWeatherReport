@@ -1,16 +1,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showCustomModal = false
+    @State private var city = ""
+
     @ObservedObject var api = ApiViewModel()
-    
+
     var body: some View {
-        VStack {
-            Button(action: {
-                self.citySearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { city in
-                    self.api.fetchWeatherAPIRequest(forCity: city)
+        ZStack {
+            VStack {
+                Button(action: {
+                    showCustomModal = true
+                }) {
+                    Text("Get weather")
                 }
-            }) {
-                Text("Get weather")
+            }
+            if showCustomModal {
+                CustomModalView(showModal: $showCustomModal, city: $city, api: api)
+                    .frame(width: 300, height: 200) 
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(radius: 10)
+                    .transition(.scale)
             }
         }
     }
