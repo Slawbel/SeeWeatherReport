@@ -11,10 +11,10 @@
 		A22ACFEC2C63A61800CFDC37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFEB2C63A61800CFDC37 /* ContentView.swift */; };
 		A22ACFEE2C63A61900CFDC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22ACFED2C63A61900CFDC37 /* Assets.xcassets */; };
 		A22ACFF12C63A61900CFDC37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22ACFF02C63A61900CFDC37 /* Preview Assets.xcassets */; };
-		A22ACFF82C63AF4B00CFDC37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFF72C63AF4B00CFDC37 /* Model.swift */; };
 		A22ACFFB2C6594BC00CFDC37 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */; };
 		A22ACFFD2C65A70F00CFDC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ACFFC2C65A70F00CFDC37 /* Constants.swift */; };
 		A24F9EE22C6B9756006B3D1F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F9EE12C6B9756006B3D1F /* AlertController.swift */; };
+		A24F9EE52C6D658D006B3D1F /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F9EE42C6D658D006B3D1F /* CurrentWeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +23,10 @@
 		A22ACFEB2C63A61800CFDC37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A22ACFED2C63A61900CFDC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22ACFF02C63A61900CFDC37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A22ACFF72C63AF4B00CFDC37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
 		A22ACFFC2C65A70F00CFDC37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A24F9EE12C6B9756006B3D1F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A24F9EE42C6D658D006B3D1F /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,7 @@
 		A22ACFE82C63A61800CFDC37 /* SeeWeatherReport */ = {
 			isa = PBXGroup;
 			children = (
-				A22ACFE92C63A61800CFDC37 /* ViewModelMainScreen.swift */,
-				A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */,
+				A24F9EE32C6D63DF006B3D1F /* ViewModel */,
 				A22ACFEB2C63A61800CFDC37 /* ContentView.swift */,
 				A22ACFF92C63AF5800CFDC37 /* Model */,
 				A22ACFED2C63A61900CFDC37 /* Assets.xcassets */,
@@ -82,9 +81,18 @@
 		A22ACFF92C63AF5800CFDC37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A22ACFF72C63AF4B00CFDC37 /* Model.swift */,
+				A22ACFFA2C6594BC00CFDC37 /* ApiViewModel.swift */,
+				A24F9EE42C6D658D006B3D1F /* CurrentWeatherData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A24F9EE32C6D63DF006B3D1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A22ACFE92C63A61800CFDC37 /* ViewModelMainScreen.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +167,7 @@
 			files = (
 				A22ACFFD2C65A70F00CFDC37 /* Constants.swift in Sources */,
 				A22ACFEC2C63A61800CFDC37 /* ContentView.swift in Sources */,
-				A22ACFF82C63AF4B00CFDC37 /* Model.swift in Sources */,
+				A24F9EE52C6D658D006B3D1F /* CurrentWeatherData.swift in Sources */,
 				A22ACFFB2C6594BC00CFDC37 /* ApiViewModel.swift in Sources */,
 				A24F9EE22C6B9756006B3D1F /* AlertController.swift in Sources */,
 				A22ACFEA2C63A61800CFDC37 /* ViewModelMainScreen.swift in Sources */,
