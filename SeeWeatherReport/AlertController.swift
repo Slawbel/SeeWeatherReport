@@ -25,7 +25,9 @@ struct CustomModalView: View {
                 
                 Button(action: {
                     api.fetchWeatherAPIRequest(forCity: city)
-                    //showModal = false
+                    api.onCompletion = { currentWeather in
+                        print(currentWeather.cityName)
+                    }
                 }) {
                     Text("Search")
                 }

@@ -5,6 +5,7 @@ class ApiViewModel: ObservableObject {
     var urlString: String
     var url: URL?
     var session: URLSession
+    var onCompletion: ((CurrentWeather) -> Void)?
     
     init() {
         self.urlString = ""
@@ -19,8 +20,9 @@ class ApiViewModel: ObservableObject {
         guard let url = URL(string: urlString) else { return }
         let task = session.dataTask(with: url) { (data, response, error) in
             if let data = data {
-                let currentWeather = self.parseJSON(withData: data)
-                print(currentWeather)
+                if let currentWeather = self.parseJSON(withData: data) {
+                    self.onCompletion?(currentWeather)
+                }
             } else if let error = error {
                 print("Request error: \(error)")
             }
