@@ -4,6 +4,7 @@ struct CustomModalView: View {
     @Binding var showModal: Bool
     @Binding var city: String
     @ObservedObject var api: ApiViewModel
+    var updateInterface: (CurrentWeather) -> Void
 
     var body: some View {
         VStack {
@@ -26,7 +27,8 @@ struct CustomModalView: View {
                 Button(action: {
                     api.fetchWeatherAPIRequest(forCity: city)
                     api.onCompletion = { currentWeather in
-                        print(currentWeather.cityName)
+                        updateInterface(currentWeather)
+                        showModal = false
                     }
                 }) {
                     Text("Search")
@@ -39,5 +41,5 @@ struct CustomModalView: View {
 }
 
 #Preview {
-    CustomModalView(showModal: .constant(true), city: .constant("New York"), api: ApiViewModel())
+    CustomModalView(showModal: .constant(true), city: .constant("Prague"), api: ApiViewModel(), updateInterface: {_ in })
 }
